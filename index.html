@@ -1,0 +1,160 @@
+<div id="bp_calc" style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size: 16px; color: #1a1a1a; max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+<h2 style="font-size: 20px; font-weight: 600; margin: 0 0 0.35rem; color: #111;">How much home can a buyer really afford now?</h2>
+<p style="font-size: 14px; color: #666; margin: 0 0 1.75rem; line-height: 1.5;">Enter the monthly payment you can comfortably afford and see how rising interest rates shrink your buying power.</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 1.5rem;">
+
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <label style="font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Monthly payment</label>
+    <div style="display: flex; align-items: center; border: 1px solid #d0d0d0; border-radius: 8px; overflow: hidden; background: #fff;">
+      <span style="padding: 0 10px; font-size: 14px; color: #888; background: #f7f7f7; border-right: 1px solid #d0d0d0; height: 38px; display: flex; align-items: center;">$</span>
+      <input data-bp="payment" type="number" value="2000" min="100" step="50" style="border: none; outline: none; background: transparent; padding: 0 10px; height: 38px; font-size: 14px; width: 100%; color: #111;">
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <label style="font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Loan term</label>
+    <div style="display: flex; align-items: center; border: 1px solid #d0d0d0; border-radius: 8px; overflow: hidden; background: #fff;">
+      <input data-bp="term" type="number" value="30" min="5" max="30" step="5" style="border: none; outline: none; background: transparent; padding: 0 10px; height: 38px; font-size: 14px; width: 100%; color: #111;">
+      <span style="padding: 0 10px; font-size: 14px; color: #888; background: #f7f7f7; border-left: 1px solid #d0d0d0; height: 38px; display: flex; align-items: center;">yrs</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <label style="font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Down payment</label>
+    <div style="display: flex; align-items: center; border: 1px solid #d0d0d0; border-radius: 8px; overflow: hidden; background: #fff;">
+      <span style="padding: 0 10px; font-size: 14px; color: #888; background: #f7f7f7; border-right: 1px solid #d0d0d0; height: 38px; display: flex; align-items: center;">$</span>
+      <input data-bp="down" type="number" value="20000" min="0" step="1000" style="border: none; outline: none; background: transparent; padding: 0 10px; height: 38px; font-size: 14px; width: 100%; color: #111;">
+    </div>
+  </div>
+
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.75rem;">
+
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <label style="font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Rate A — Feb. low point</label>
+    <div style="display: flex; align-items: center; border: 1px solid #d0d0d0; border-radius: 8px; overflow: hidden; background: #fff;">
+      <input data-bp="rateA" type="number" value="5.99" min="0.5" max="20" step="0.01" style="border: none; outline: none; background: transparent; padding: 0 10px; height: 38px; font-size: 14px; width: 100%; color: #111;">
+      <span style="padding: 0 10px; font-size: 14px; color: #888; background: #f7f7f7; border-left: 1px solid #d0d0d0; height: 38px; display: flex; align-items: center;">%</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <label style="font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Rate B — current high</label>
+    <div style="display: flex; align-items: center; border: 1px solid #d0d0d0; border-radius: 8px; overflow: hidden; background: #fff;">
+      <input data-bp="rateB" type="number" value="6.64" min="0.5" max="20" step="0.01" style="border: none; outline: none; background: transparent; padding: 0 10px; height: 38px; font-size: 14px; width: 100%; color: #111;">
+      <span style="padding: 0 10px; font-size: 14px; color: #888; background: #f7f7f7; border-left: 1px solid #d0d0d0; height: 38px; display: flex; align-items: center;">%</span>
+    </div>
+  </div>
+
+</div>
+
+<hr style="border: none; border-top: 1px solid #e8e8e8; margin: 0 0 1.5rem;">
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.25rem;">
+
+  <div style="background: #f7f8f9; border-radius: 10px; padding: 1rem 1.1rem;">
+    <div style="font-size: 12px; color: #888; margin-bottom: 4px;">At <span data-bp="labelA">5.99</span>% you can afford</div>
+    <div data-bp="homeA" style="font-size: 22px; font-weight: 600; color: #111; margin-bottom: 2px;">—</div>
+    <div style="font-size: 13px; color: #888;">Loan amount: <span data-bp="loanA">—</span></div>
+  </div>
+
+  <div style="background: #f7f8f9; border-radius: 10px; padding: 1rem 1.1rem;">
+    <div style="font-size: 12px; color: #888; margin-bottom: 4px;">At <span data-bp="labelB">6.64</span>% you can afford</div>
+    <div data-bp="homeB" style="font-size: 22px; font-weight: 600; color: #111; margin-bottom: 2px;">—</div>
+    <div style="font-size: 13px; color: #888;">Loan amount: <span data-bp="loanB">—</span></div>
+  </div>
+
+</div>
+
+<div style="border-radius: 10px; padding: 1rem 1.25rem; background: #fff0ea; border: 1px solid #f5c4b3; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem;">
+  <span style="font-size: 13px; color: #993c1d;">Lost buying power at the higher rate</span>
+  <span data-bp="loss" style="font-size: 22px; font-weight: 600; color: #993c1d;">—</span>
+</div>
+
+<div style="margin-bottom: 1rem;">
+
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+    <div data-bp="barLabelA" style="font-size: 13px; color: #555; min-width: 60px; text-align: right; flex-shrink: 0;">5.99%</div>
+    <div style="flex: 1; height: 32px; background: #f0f1f2; border-radius: 5px; overflow: hidden;">
+      <div data-bp="barA" style="width: 100%; height: 100%; border-radius: 5px; background: #378add; display: flex; align-items: center; padding-left: 12px; font-size: 12px; font-weight: 600; color: #0c447c; transition: width 0.4s ease; white-space: nowrap; overflow: hidden;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+    <div data-bp="barLabelB" style="font-size: 13px; color: #555; min-width: 60px; text-align: right; flex-shrink: 0;">6.64%</div>
+    <div style="flex: 1; height: 32px; background: #f0f1f2; border-radius: 5px; overflow: hidden;">
+      <div data-bp="barB" style="width: 60%; height: 100%; border-radius: 5px; background: #f0997b; display: flex; align-items: center; padding-left: 12px; font-size: 12px; font-weight: 600; color: #712b13; transition: width 0.4s ease; white-space: nowrap; overflow: hidden;"></div>
+    </div>
+  </div>
+
+</div>
+
+<p style="font-size: 12px; color: #aaa; margin-top: 1rem; line-height: 1.5;">* Based on principal &amp; interest only. Does not include property taxes, homeowner's insurance, PMI, or HOA fees. Consult a licensed lender for a full payment estimate.</p>
+
+</div>
+
+<script>
+(function() {
+  function bpInit() {
+    var root = document.getElementById('bp_calc');
+    if (!root) return;
+
+    function get(key) { return root.querySelector('[data-bp="' + key + '"]'); }
+    function val(key) { return parseFloat(get(key).value) || 0; }
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+    function loan(payment, annualRate, years) {
+      if (annualRate <= 0) return payment * years * 12;
+      var r = annualRate / 100 / 12;
+      var n = years * 12;
+      return payment * (1 - Math.pow(1 + r, -n)) / r;
+    }
+
+    function calc() {
+      var payment = val('payment');
+      var term    = val('term') || 30;
+      var down    = val('down');
+      var rA      = val('rateA');
+      var rB      = val('rateB');
+
+      var loanA = loan(payment, rA, term);
+      var loanB = loan(payment, rB, term);
+      var homeA = loanA + down;
+      var homeB = loanB + down;
+      var diff  = homeA - homeB;
+
+      get('labelA').textContent    = rA.toFixed(2);
+      get('labelB').textContent    = rB.toFixed(2);
+      get('homeA').textContent     = fmt(homeA);
+      get('homeB').textContent     = fmt(homeB);
+      get('loanA').textContent     = fmt(loanA);
+      get('loanB').textContent     = fmt(loanB);
+      get('loss').textContent      = fmt(Math.abs(diff)) + (diff >= 0 ? ' less home' : ' more home');
+      get('barLabelA').textContent = rA.toFixed(2) + '%';
+      get('barLabelB').textContent = rB.toFixed(2) + '%';
+      get('barA').textContent      = fmt(homeA);
+      get('barB').textContent      = fmt(homeB);
+
+      var maxHome = Math.max(homeA, homeB, 1);
+      get('barA').style.width = Math.round((homeA / maxHome) * 100) + '%';
+      get('barB').style.width = Math.round((homeB / maxHome) * 100) + '%';
+    }
+
+    root.querySelectorAll('[data-bp="payment"],[data-bp="term"],[data-bp="down"],[data-bp="rateA"],[data-bp="rateB"]').forEach(function(el) {
+      el.addEventListener('input', calc);
+    });
+
+    calc();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bpInit);
+  } else {
+    bpInit();
+  }
+  setTimeout(bpInit, 800);
+})();
+</script>
